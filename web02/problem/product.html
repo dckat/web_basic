@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="top.css">
+    <style>
+        #top {
+            margin: 5px;        /* 바깥쪽 여백 */
+            padding: 5px;       /* 안쪽 여백 */
+            background-color: lime;
+            width: 500px;
+            height: 100px;
+        }
+        #top2 {
+            text-align: center;
+            position: fixed;
+            right: 5px;
+            top: 5px;
+            background-color: black;
+            color: yellow;
+            width: 100px;
+            height: 50px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 50px gray;
+            display: inline-block;
+            /* 가로뒷쪽 세로아랫쪽 음영강도 색 */
+            /*
+            border-style: dotted;
+            border-color: red;
+            */
+            border : 2px dotted red;
+        }
+        #content {
+            padding: 10px;
+            width: 600px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+      <div id="top">
+        <nav>
+            <ul>
+                <li>
+                    <a href="member.html">회원가입</a>
+                </li>
+                <li>
+                    <a href="product.html">제품정보</a>
+                </li>
+                <li>
+                    <a href="bbs.html">게시판</a>
+                </li>
+                <li>
+                    <a href="basket.html">장바구니</a>
+                </li>
+            </ul>
+        </nav>
+      </div>
+      <div id="top2">장바구니현황</div>
+      <div id="content">
+        <center>
+            <table border = "1" align="center">
+                <tr>
+                    <td class="item">제품번호</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td class="item">제품이름</td>
+                    <td>
+                        <a href = "product?no=100.html">shoes1</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item">제품설명</td>
+                    <td>fun shoes1</td>
+                </tr>
+                <tr>
+                    <td class="item">제품가격</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td class="item">제조회사</td>
+                    <td>c100</td>
+                </tr>
+                <tr>
+                    <td class="item">제품이미지</td>
+                    <td>
+                        <img id = "shoes" src="shoes.jpg">
+                    </td> 
+                </tr>
+            </table>
+        </center>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>

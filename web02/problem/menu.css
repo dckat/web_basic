@@ -1,0 +1,29 @@
+li {
+    list-style: none;
+    padding: 10px;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+.top .bottom {
+    width: 800px;
+    height: 120px;
+    margin: auto;
+    border: 1px dotted;
+    text-align: center;
+}
+
+input {
+    border-color: lime;
+    width: 400px;
+    height: 30px;
+}
+
+img {
+    height: 30px;
+    width: 80px;
+}
