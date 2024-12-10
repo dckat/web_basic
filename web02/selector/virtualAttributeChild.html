@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: green;
+            /* 밑줄 사라짐 */
+            text-decoration: none;
+        }
+        a:hover {
+            /* 마우스를 올렸을 때 */
+            color: yellow;
+            background: black;
+        }
+        a:active {
+            /* 마우스를 클릭하는 순간 */
+            color: red;
+            background: black;
+        }
+        a:visited {
+            /* 해당 사이트를 방문한 경우 */
+            color: greenyellow;
+            background: black;
+        }
+        input:disabled {
+            background-color: gray;
+        }
+        input:focus {
+            background-color: green;
+        }
+        button:hover {
+            color: red;
+            background-color: aqua;
+            font-weight: bold;
+        }
+        input[type = text] {
+            background-color: red;
+            color: white;
+            font-size: 30px;    /* px: 픽셀 */
+        }
+        input[type ^= pass] {
+            background-color: rgb(5, 238, 44);
+            color: rgb(21, 14, 219);
+            font-size: 70px;    /* px: 픽셀 */
+        }
+    </style>
+</head>
+<body>
+    <a href="basicSelector.html">기본선택자</a>&nbsp; &nbsp; &nbsp;
+    <a href="http://www.daum.net">다음</a>
+    <hr>
+    user : <input type="text" disabled value="apple"> <br>
+    password : <input type="password"> <br>
+    <button>로그인하기</button>
+    <hr>
+</body>
+</html>
