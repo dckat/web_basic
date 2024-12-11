@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            text-align: center;
+        }
+        .outer {
+            display: grid;
+            grid-template-areas: 
+                'menu menu'
+                'left right'
+                'under under';
+            gap: 10px;
+            padding: 20px;
+        }
+        #d1 {
+            grid-area: menu;
+        }
+        #d2 {
+            grid-area: left;
+        }
+        #d3 {
+            grid-area: right;
+        }
+        #d4 {
+            grid-area: under;
+        }
+    </style>
+</head>
+<body>
+</body>
+    <div class="outer">
+        <div id="d1" style="background-color: aqua;">감자가 정말 맛있어. 짱이야!</div>
+        <div id="d2" style="background-color: greenyellow;">고구마가 정말 맛있어. 짱이야!</div>
+        <div id="d3" style="background-color: yellow;">양파가 정말 맛있어. 짱이야!</div>
+        <div id="d4" style="background-color: pink;">배추가 정말 맛있어. 짱이야!</div>
+    </div>
+</html>
