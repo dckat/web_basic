@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+            border-width: 2px;
+            border-style: solid;
+            width: auto;
+        }
+        .burgerking {
+            display: grid;
+            grid-template-columns: 200px 200px auto;
+            grid-template-rows: 200px auto;
+            gap: 20px;
+            padding: 10px;
+            background-color: gray;
+        }
+        #d1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding: 80px;
+        }
+        #d2 {
+            border-style: none;
+        }
+        #burger {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="burgerking">
+        <div id="d1" style="background-color: pink;">오늘의 할인 메뉴는?</div>
+        <div id="d2">
+            <img id="burger" src="../img/food-1.png">
+        </div>
+        <div id="d3">
+            <img src="../img/food-2.png">
+        </div>
+        <div id="d4">
+            <img src="../img/food-3.png">
+        </div>
+    </div>
+</body>
+</html>

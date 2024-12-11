@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Media Feature</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+        <style>
+            body {
+                background-color: skyblue;
+            }
+            #image {
+                margin: 50px;  
+                padding: 50px;
+            }
+            /* smart phone */
+            @media screen and (max-width: 767px) {
+                #blackpink {
+                    width: 200px;
+                    height: 50px;
+                    background-color: black;
+                    color: pink;
+                }
+                #yellowpink, #greenpink {
+                    display: none;
+                }
+            }
+            /* ipad */
+            @media screen and (min-width: 768px) and (max-width: 959px) {
+                #blackpink, #greenpink {
+                    display: none;
+                }
+                #yellowpink {
+                    width: 200px;
+                    height: 50px;
+                    background-color: yellow;
+                    color: pink;
+                }
+            }
+            /* desktop */
+            @media screen and (min-width: 960px) {
+                #blackpink, #yellowpink {
+                    display: none;
+                }
+                #greenpink {
+                    width: 200px;
+                    height: 50px;
+                    background-color: lime;
+                    color: pink;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div id="blackpink">난 블랙핑크</div>
+            <div id="yellowpink">난 엘로우핑크</div>
+            <div id="greenpink">난 그린핑크</div>
+            
+            <img id="image" src="blackpink.png">
+        </center>
+    </body>
+</html>
