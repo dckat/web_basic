@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let title = prompt("영화 제목 입력");
+        let price = prompt("영화 관람료 입력");
+        let rate = prompt("영화 할인율 입력");
+        let watch = confirm("영화 관람 여부");
+
+        let message = "영화의 제목은 " + title + "이고, 영화 관람료는 " + price + " 영화 할인율은 " + rate + "%이며, 영화 관람은 ";
+
+        if (watch) {
+            message += "봤음.";
+        } else {
+            message += "못봤음.";
+        }
+
+        alert(message);
+
+        let price1 = 1000;
+        let cnt1 = 2;
+        let price2 = 2000;
+        let cnt2 = 3;
+
+        let total1 = price1 * cnt1;
+        let total2 = price2 * cnt2;
+        let total3 = total1 + total2;
+
+        let message1 = "꼬북이 구매 가격은 " + total1 + "원이고, 메로나 구매 가격은 " +
+        total2 + "원\n전체 구매 가격은 " + total3 + "원";
+
+        alert(message1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

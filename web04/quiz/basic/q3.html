@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let star = "";
+        for (let index = 0; index < 10; index++) {
+            star += "*";
+        }
+        alert("별을 10개 찍어보세요." + star);
+
+        let sign = prompt("원하는 기호 입력");
+        let cnt = parseInt(prompt("원하는 횟수 입력"));
+        let result = ""
+        for (let i = 0; i < cnt; i++) {
+            result += sign;
+        }
+        alert(result);
+
+        let count = 0;
+        while (true) {
+            let input = parseInt(prompt("1)증가, 2)감소, 3)종료를 선택해주세요."));
+            if (input == 1) {
+                count++;
+            }
+            else if (input == 2) {
+                count--;
+            }
+            else if (input == 3) {
+                alert("프로그램 종료 >> 현재까지의 카운트는 " + count);
+                break;
+            }
+        }
+
+        let date = new Date();
+        let currentYear = date.getFullYear();
+        let message = currentYear + "년 ";
+        if (currentYear >= 2000) {
+            message += "밀레니엄 세대시군요.\n";
+        } else {
+            message += "밀레니엄 세대가 아니시군요.\n";
+        }
+
+        let currentDay = date.getDay();
+        message += currentDay + ">> ";
+        if (currentDay == 6 || currentDay == 0) {
+            message += "쉬~~~~~~~~~자\n";
+        } else {
+            message += "열~~심히 공부하자\n";
+        }
+
+        let currentMonth = date.getMonth() + 1;
+        message += currentMonth + ">> ";
+        if (currentMonth == 2) {
+            message += "28일까지";
+        }
+        else if (currentMonth == 4 || currentMonth == 6 || currentMonth == 9 || currentMonth == 11) {
+            message += "30일까지";
+        }
+        else {
+            message += "31일까지";
+        }
+        alert(message);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

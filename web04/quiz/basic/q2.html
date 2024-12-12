@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let date = new Date();
+
+        let tripPlace = "홍콩";
+        let tripPrice = 600000;
+        let tripPeople = 5;
+        let y = date.getFullYear();
+        let m = date.getMonth() + 1;
+        let d = date.getDate();
+        let tripDate = y + "년 " + m + "월 " + d + "일";
+        let tel = "010-1234-5678";
+        let attention = "마카오를 방문하고자 하는 사람은 서류 체크 필수 체크";
+        let additionalPrice = parseInt(prompt("예상 추가 경비 입력"));
+        let realAdditionalPrice = additionalPrice - 50000;
+        let totalPrice = tripPrice * tripPeople;
+        let totalAdditional = realAdditionalPrice * tripPeople;
+        let realTotal = totalPrice + totalAdditional;
+
+        let message = "여행지 명 " + tripPlace + "\n여행 경비 " + tripPrice +
+        "\n여행 인원 " + tripPeople + "\n여행 일정 " + tripDate +
+        "\n여행사 연락처 " + tel + "\n여행 중 주의사항 " + attention +
+        "\n예상 추가 경비 " + additionalPrice + "\n실제 추가 경비(1인) " + realAdditionalPrice +
+        "\n총 회원 원래 경비 " + totalPrice + " 추가 경비(전체인원) " + totalAdditional +
+        "\n총 회원 최종 경비 " + realTotal;
+        alert(message);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
