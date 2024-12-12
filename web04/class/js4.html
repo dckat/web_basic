@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 가로. 세로 입력
+        let row = prompt("가로 입력");     // string
+        let col = prompt("세로 입력");
+        let row1 = parseFloat(row);     // string -> float
+        let col2 = parseFloat(col);       // string -> int
+        alert(row1.toFixed(1) * col2.toFixed(1));
+
+        // 2. 커피한잔 가격. 커피구매 갯수를 입력
+        //    전체 결제금액을 구해서 출력
+        let price = prompt("커피한잔 가격 입력");
+        let cnt = prompt("커피구매 갯수 입력");
+        let total = parseInt(price) * parseInt(cnt);
+        alert(total);
+
+        // 3. 사과 가격이 2000, 배의 가격이 3000
+        //    사과 구매 갯수 3, 배 구매 갯수 2
+        //    전체 결제 금액?
+        let apple = 2000;
+        let pear = 3000;
+        let aCnt = 3;
+        let pCnt = 2;
+        let totalPrice = apple*aCnt + pear * pCnt;
+        alert(totalPrice);
+
+        // 4. 어제 온도 25도. 오늘 온도 10도
+        //    어제와 오늘 온도의 평균은?
+        let yesterday = 25;
+        let today = 10;
+        let avg = (yesterday+today) / 2;
+        alert(avg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
