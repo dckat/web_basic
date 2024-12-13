@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .placebuttons {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            width: 700px;
+        }
+        hr {
+            border: 0;
+            background: red;
+            height: 3px;
+            width: 800px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function changeImage(name) {
+            let display = document.getElementById("imageDisplay");
+            display.src = name;
+        }
+    </script>
+</head>
+<body>
+    <div class="placebuttons">
+        <button onclick="changeImage('../image/image1.png')" class="btn btn-info">제주도로</button><br>
+        <button onclick="changeImage('../image/image2.png')" class="btn btn-success">일본으로</button><br>
+        <button onclick="changeImage('../image/image3.png')" class="btn btn-primary">하와이로</button><br>
+    </div>
+    <hr>
+    <div>
+        <h2>힘들다!! 우리도 떠나자!!</h2>
+    </div>
+    <hr>
+    <div id="imagePlace">
+        <img src="../image/image1.png" id="imageDisplay">
+    </div>
+</body>
+</html>
