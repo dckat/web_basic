@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function text() {
+            let result = document.querySelector("#result");
+            let text = document.querySelector("#text").value;
+            let textNode = document.createTextNode(text);
+            result.appendChild(textNode);
+        }
+
+        function img() {
+            let result = document.querySelector('#result');
+            const newImage = document.createElement('img');
+            newImage.src = '../image/ok.png';
+            newImage.width = 100;
+            newImage.height = 50;
+            result.appendChild(newImage);
+        }
+    </script>
+</head>
+<body>
+    글자입력 : <input type="text" id="text">
+    <button onclick="text()">글자추가</button><br>
+    <button onclick="img()">이미지추가</button><br>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>
