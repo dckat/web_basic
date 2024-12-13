@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(x, y) {
+            alert(x + y);
+            return x + y;
+        }
+        function minus(x, y) {
+            alert(x - y);
+            return x - y;
+        }
+        function all2(x, y) {
+            // 더한 값 --> 뺀 값 ==> 이 두개를 곱해서 출력
+            let a = add(x, y);
+            let m = minus(x, y);
+            alert(a*m);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="add(100, 200)">더하기</button>
+    <button onclick="minus(100, 200)">빼기</button>
+    <button onclick="all2(100, 200)">더하기+빼기</button>
+</body>
+</html>
