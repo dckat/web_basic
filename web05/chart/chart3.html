@@ -1,0 +1,35 @@
+<html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['연도', '응용SW개발자', 'IT컨설턴트', 'IT품질관리자', 'IT테스터'],
+            ['2020', 323174, 458818, 438404, 207793],
+            ['2021', 306324, 484732, 424780, 200136],
+            ['2022', 311962, 476007, 402626, 208959],
+            ['2023', 341404, 476404, 442826, 189146]
+          ]);
+  
+          var options = {
+            chart: {
+              title: 'SW기술자 2020년대 연도별 평균월급',
+              subtitle: 'IT. 2020-2023',
+            },
+            bars: 'horizontal' // Required for Material Bar Charts.
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+  
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+      </script>
+    </head>
+    <body>
+      <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+    </body>
+  </html>
+  
