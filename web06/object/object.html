@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            name: "John",
+            age: 30,
+            isStudent: false,
+        };
+
+        console.log(person.name + " " + person.age);
+        person.job = "개발자";
+        console.log(person);
+        console.log(person.job);
+        console.log("age" in person);
+
+        let keys = Object.keys(person);
+        console.log(keys);
+        let values = Object.values(person);
+        console.log(values);
+        let entries = Object.entries(person);
+        console.log(entries);
+
+        alert(entries);
+    </script>
+</head>
+<body>
+</body>
+</html>

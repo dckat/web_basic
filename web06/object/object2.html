@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const person = {
+            name: "Alice",
+            greet: function() {
+                alert(`안녕! 내 이름은 ${this.name}`);
+            },
+            bye() {
+                alert(`${this.name}아! 바이바이!`);
+            },
+            info() {
+                return '당신의 이름은 ' + this.name;
+            }
+        };
+
+        person.greet();
+        person.bye();
+
+        // js는 변수명과 함수명이 같을 경우 헷갈림
+        // 변수명과 함수몀을 동일하게 쓰지 말것.
+        let result = person.info();  // return된 값을 출력하거나 변수에 저장하여야 함
+        alert("리턴값은 " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

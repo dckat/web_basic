@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const megaPlus = {
+            name: "메가플러스",
+            type: "오피스텔",
+            totalUnits: 140,
+            minRange: 56.27,
+            maxRange: 85.47,
+            recentTransaction: {
+                size: "56A",
+                price: "1억 1000만원",
+                date: "24.11.09"
+            },
+            displayInfo: function() {
+                console.log(`이름: ${this.name}`);
+                console.log(`유형: ${this.type}`);
+                console.log(`세대 수: ${this.totalUnits}`);
+                console.log(`최소 면적: ${this.minRange}`);
+                console.log(`최대 면적: ${this.maxRange}`);
+            },
+            printTransaction() {
+                return `최근 거래 내역: ${this.recentTransaction.size} 
+                - ${this.recentTransaction.price} (Date: ${this.recentTransaction.date})`;
+            }
+        }
+
+        megaPlus.displayInfo();
+        let trans = megaPlus.printTransaction();
+        alert(trans);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
