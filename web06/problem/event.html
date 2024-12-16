@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="colorForm">
+        <input type="radio" name="bgColor" value="Yellow"> Yellow<br>
+        <input type="radio" name="bgColor" value="Pink"> Pink<br>
+        <input type="radio" name="bgColor" value="LightBlue"> LightBlue<br>
+        <button type="button" id="bgColorSubmit">Apply</button>
+    </form>
+
+    <form id="hobbyForm">
+        <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="Traveling"> Traveling</label>
+        <label><input type="checkbox" name="hobby" value="Cooking"> Cooking</label>
+        <label><input type="checkbox" name="hobby" value="Gaming"> Gaming</label>
+        <button type="button" id="submitHobby">Submit</button>
+        </form>
+    <p id="outputHobby"></p>
+
+    <form id="termsForm">
+        <label>
+        <input type="checkbox" id="agreeTerms"> I agree to the terms and conditions
+        </label>
+        <br>
+        <button type="button" id="submitTerms">Submit</button>
+    </form>
+        
+    <script>
+        let btn1 = document.getElementById("bgColorSubmit");
+        btn1.addEventListener('click', function() {
+            let bgColor = document.querySelector("input[name = 'bgColor']:checked");
+
+            if (bgColor) {
+                document.body.style.backgroundColor = bgColor.value;
+            } else {
+                alert("Please select a color!");
+            }
+        });
+
+        let btn2 = document.getElementById("submitHobby");
+        btn2.addEventListener('click', function() {
+            let checks = document.querySelectorAll("input[name='hobby']:checked");
+            let pTag = document.querySelector("#outputHobby");
+            let hobbies = [];
+
+            checks.forEach((check) => hobbies.push(check.value));
+
+            pTag.textContent = hobbies.length > 0 ? `나의 취미는 ${hobbies.join(', ')}` : "취미가 선택되지 않음";
+        });
+
+        let btn3 = document.getElementById("submitTerms");
+        btn3.addEventListener('click', function() {
+            let check = document.querySelector("input[id = 'agreeTerms']:checked");
+
+            if (check) {
+                alert("확인되었습니다.");
+            }
+            else {
+                alert("필수선택입니다.");
+            }
+        });
+    </script>
+</body>
+</html>
