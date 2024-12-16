@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function greet(name) {
+            alert(name + "님 환영합니다!");
+        }
+        function info(action) {
+            // 입력받아서 action 함수 호출
+            let name = prompt("이름 입력하세요");
+            action(name);
+        }
+
+        // info(greet);    // callback 함수
+        function bye(name) {
+            alert("안녕 잘가~~!! " + name + "아!");
+        }
+        // info(bye);
+        info((x) => alert(x + "아!! 오늘은 월요일!"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
