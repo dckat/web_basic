@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="numberInput">Enter a number:</label>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button type="button" id="doubleBtn" onclick="doubleNumber()">Double the number</button>
+    </form>
+
+    <script>
+        function doubleNumber() {
+            let inputNumber = parseInt(document.getElementById("numberInput").value);
+            if (isNaN(inputNumber)) {
+                alert("숫자가 아닙니다.");
+                return;
+            }
+            let doubledNumber = inputNumber * 2;
+            alert(doubledNumber);
+        }
+    </script>
+</body>
+</html>
