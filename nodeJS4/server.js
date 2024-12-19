@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const crypto = require("crypto");
+const mysql = require("mysql2");
 
 const port = 9999;
 
@@ -10,6 +11,13 @@ const app = express(); // express할 수 있는 객체 리턴
 // body-parser 미들웨어 설정
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+const db = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    database: 'node',
+    password: '1234'
+});
 
 app.get("/insert", (req, res) => {
     console.log("/insert 주소로 GET요청");
@@ -34,7 +42,12 @@ app.post("/insert2", (req, res) => {
     let telValue = req.body.tel;
     let result = "id=" + idValue + ", pw=" + pwValue + ", hashedPW=" + hashedPw + ", name=" + nameValue + ", tel=" + telValue;
     console.log(result);
-    res.send(result);
+
+    const sqlQuery = "INSERT INTO users(id, password, name, tel) VALUES (?, ?, ?, ?)";
+
+    db.query(sqlQuery, [idValue, hashedPw, nameValue, telValue], (err, result) => {
+        res.send(result);
+    })
 });
 
 app.get("/delete", (req, res) => {
@@ -50,7 +63,11 @@ app.post("/delete2", (req, res) => {
     let idValue = req.body.id;
     let result = "삭제할 id는 " + idValue + "임";
     console.log(result);
-    res.send(result);
+
+    const sqlQuery = "DELETE from users where id = ?";
+    db.query(sqlQuery, [idValue], (err, result) => {
+        res.send(result);
+    });
 });
 
 
